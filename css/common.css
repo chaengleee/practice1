@@ -1,3 +1,5 @@
+@charset "utf-8";
+
 .dongle-regular {
   font-family: "Dongle", sans-serif;
   /* font-weight: 400;
@@ -107,11 +109,12 @@ body {
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 950px) {
   .searchWrap {
     display: none;
   }
 }
+
 .mainVisual {
   position: relative;
 }
@@ -136,7 +139,7 @@ body {
 .mainVisual .inner h2 {
   /* border: 3px solid red; */
   width: 880px;
-  font-size: 114px;
+  font-size: 7vw;
   font-weight: bold;
   line-height: 74px;
   color: white;
@@ -148,7 +151,7 @@ body {
 }
 .mainVisual .inner p {
   width: 710px;
-  font-size: 48px;
+  font-size: 3vw;
   line-height: 32px;
   color: white;
   position: absolute;
@@ -162,11 +165,11 @@ body {
   border: 2px solid white;
   border-radius: 25px;
   background-color: transparent;
-  padding-top: 10px;
+  padding-top: 1rem;
   color: white;
-  width: 240px;
+  width: 15rem;
   height: 67px;
-  font-size: 44px;
+  font-size: 2.5vw;
   z-index: 2;
   transform: translate(-50%, -50%);
   left: 50%;
@@ -187,7 +190,6 @@ body {
   font-size: 88px;
   margin-top: 120px;
   left: 50%;
-
   transform: translate(-50%, 20%);
   font-weight: bold;
   z-index: 2;
@@ -223,24 +225,39 @@ body {
   margin-top: 180px;
 }
 
+@media (max-width: 900px) {
+  .mainVisual .inner h2,
+  .mainVisual .inner p {
+    bottom: 40%;
+  }
+  .mainVisual .inner a {
+    width: 11rem;
+    font-size: 2rem;
+    top: 40%;
+  }
+  .mainVisual .inner2 p {
+    font-size: 2rem;
+  }
+}
+
 .addMenu {
   width: 100%;
   margin-top: 10%;
   display: flex;
 }
+
 .addMenu .menu p {
   position: relative;
   background-color: #c10000;
   left: -10%;
-  top: 2.5rem;
-  width: 230px;
-  height: 100px;
+  top: 3rem;
+  width: 12vw;
+  height: 6.25vw;
   color: white;
-  font-size: 60px;
+  font-size: 3.75vw;
   text-align: center;
   padding-top: 1.2rem;
   padding-left: 0.1rem;
-
   z-index: 2;
   clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
 }
@@ -259,8 +276,8 @@ body {
 }
 .addMenu .card {
   position: absolute;
-  width: 330px;
-  height: 130px;
+  width: 80%;
+  height: 8vw;
   display: flex;
   bottom: 0.5rem;
   left: 1rem;
@@ -272,22 +289,27 @@ body {
 }
 
 .addMenu .card > p {
-  font-size: 2rem;
+  font-size: 2vw;
   text-align: center;
   margin-right: 40px;
 }
+.addMenu .card img {
+  width: auto;
+  height: auto;
+}
 .addMenu .card .fa-plus {
   background-color: #c10000;
-  width: 41px;
-  height: 41px;
+  width: 2.56vw;
+  height: 2.56vw;
   border-radius: 50%;
   color: white;
   position: absolute;
   text-align: center;
   right: 32px;
   bottom: 45px;
-  font-size: 2rem;
+  font-size: 2vw;
   padding-top: 0.2rem;
+  right: 1rem;
 }
 .addslide .card:focus {
   transform: translateY(-10px);
@@ -304,10 +326,22 @@ body {
 
 @media (max-width: 1200px) {
   .addMenu .card {
-    width: 80%;
+    width: 90%;
+    height: 70%;
+    justify-content: space-evenly;
   }
   .addMenu .card img {
-    width: 50%;
+    width: 40%;
+  }
+  .addMenu .menu p {
+    left: 10%;
+    /* width: 100%; */
+    margin-top: 15%;
+  }
+  .addMenu .card .fa-plus {
+    text-align: center;
+    top: 2.5rem;
+    right: 1rem;
   }
 }
 /* pizzamenu 수정 필요 */
@@ -351,23 +385,23 @@ body {
   top: 0.5rem;
   transform: translateX(180%);
 }
+
 .menu .menuList {
   position: absolute;
-
   background-color: #dedede;
-  width: 60%;
+  width: 70%;
   height: 85%;
   z-index: 0;
   padding-top: 2rem;
-  column-count: 2;
-  column-width: 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 50px 50px 50px;
+  /* flex-wrap: nowrap; */
 }
 .menuList > li {
   font-size: 2.5rem;
   width: 60%;
   transform: translate(10%, 70%);
-  display: grid;
-  grid-row-gap: 10px 10px;
   padding: 1rem;
 }
 
@@ -378,7 +412,7 @@ body {
 }
 .pizzaMenu .menu img {
   width: 100%;
-  object-fit: cover;
+  /* object-fit: cover; */
   z-index: 999;
 }
 .pizzaMenu .desc button {
@@ -389,7 +423,7 @@ body {
   z-index: 1500;
   top: 70%;
   left: 35%;
-  width: 150px;
+  width: 10%;
   height: 40px;
   border-radius: 10px;
   font-size: 15px;
@@ -397,16 +431,32 @@ body {
 /* .menu > li:nth-of-type(odd) .desc {
   order: 1;
 } */
-.menu > li:nth-of-type(even) {
+.menu > li:nth-of-type(2) {
   flex-direction: row-reverse;
 }
-
+@media (max-width: 1100px) {
+  .pizzaMenu .menu img {
+    width: 50%;
+  }
+  .menu .menuList {
+    height: 110%;
+    width: 70%;
+    grid-template-rows: 30px 30px 30px;
+  }
+  .pizzaMenu .desc button {
+    width: 13%;
+    bottom: 60%;
+    transform: translate(50%, 120%);
+  }
+  .menuList > li {
+    font-size: 2rem;
+  }
+}
 .vector2 {
-  padding-top: 3.5rem;
+  padding-top: 4vw;
 }
 
 .plusMenu {
-  /* border: 2px solid yellow; */
   width: 100%;
   height: 100%;
   margin-top: 10%;
@@ -426,21 +476,40 @@ body {
 }
 
 .plusMenu p {
-  font-size: 4rem;
+  font-size: 4vw;
   color: white;
   position: absolute;
   bottom: 27%;
   left: 15%;
 }
 .plusMenu .plus img {
-  filter: brightness(65%);
+  filter: brightness(55%);
 }
 @media screen and (max-width: 1200px) {
-  img {
-    max-width: 100%;
+  .plusMenu .card img {
+    width: 100%;
   }
 }
-
+@media screen and (max-width: 800px) {
+  .plusMenu .plus {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30%;
+  }
+  .plusMenu .card img {
+    width: 70%;
+    height: 22rem;
+    transform: translateX(20%);
+  }
+  .plusMenu .card {
+    padding: 1rem;
+    margin: auto;
+  }
+  .plusMenu p {
+    font-size: 3rem;
+    left: 20%;
+  }
+}
 .opinion {
   padding: 9rem 0 100px 0;
 }
@@ -530,24 +599,54 @@ body {
   top: -30px;
   color: #f6f6f6;
 }
+@media screen and (max-width: 800px) {
+  .opinion form {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: auto;
+    justify-content: center;
+  }
 
+  .opinion label:nth-of-type(3) {
+    order: 10;
+  }
+  .mw2 {
+    width: calc(100% - 6rem);
+    height: 60%;
+    margin: auto;
+  }
+  .opinion h2 {
+    font-size: 3rem;
+    margin: 2rem 0;
+  }
+  .opinion label input {
+    transform: translateX(-5%);
+  }
+  .opinion label textarea {
+    transform: translateX(5%);
+    padding-left: 1rem;
+  }
+  .opinion button {
+    bottom: 0.3rem;
+  }
+}
 .foot {
   width: 100%;
+  /* height: 100%; */
   background-color: #f6f6f6;
 }
 
 .foot .inner {
   width: 100%;
-  height: 350px;
   text-align: left;
 }
 
 .foot .inner strong {
-  font-size: 40px;
+  font-size: 2.5rem;
   font-weight: bold;
 }
 .foot .inner a {
-  font-size: 30px;
+  font-size: 2rem;
   color: #67666a;
   /* display: flex;
   flex-direction: column; */
@@ -555,15 +654,15 @@ body {
 
 .foot .contact {
   width: 14.5%;
-  transform: translate(20%, 60%);
+  transform: translate(20%, 65%);
 }
 .foot .info {
   width: 20%;
-  transform: translate(110%, -40%);
+  transform: translate(120%, -40%);
 }
 .foot .help {
   width: 30%;
-  transform: translate(140%, -138%);
+  transform: translate(140%, -140%);
 }
 
 .foot .info a,
@@ -579,4 +678,10 @@ body {
 }
 .foot .right a {
   padding: 0.3rem;
+}
+
+@media screen and (max-width: 800px) {
+  .foot .inner a {
+    font-size: 1.5rem;
+  }
 }
