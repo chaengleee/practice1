@@ -71,9 +71,6 @@ body {
   .ham {
     display: none;
   }
-  .searchWrap input::placeholder:focus {
-    display: none;
-  }
 }
 
 @media (max-width: 1200px) {
@@ -107,10 +104,8 @@ body {
     height: 60px;
     border-radius: 20px;
   }
-  .searchWrap input::placeholder:focus {
-    display: none;
-  }
 }
+
 @media (max-width: 900px) {
   .searchWrap {
     display: none;
