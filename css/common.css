@@ -57,6 +57,7 @@ body {
     transform: translate(-180%, 50%);
     top: 30%;
   }
+
   .hd .searchWrap input {
     border: 1px solid #eaeaea;
     background-color: #f2f1f1;
@@ -80,7 +81,7 @@ body {
   .ham {
     display: block;
     top: 30%;
-    transform: translate(-50%, 30%);
+    transform: translate(-80%, 40%);
   }
   .hd .searchWrap {
     position: relative;
@@ -221,7 +222,7 @@ body {
   transform: translate(-50%, 350%);
   margin-top: 180px;
 }
-/* 화면에 출력되는데 시간이 걸려요  */
+
 .addMenu {
   width: 100%;
   margin-top: 10%;
@@ -239,6 +240,7 @@ body {
   text-align: center;
   padding-top: 1.2rem;
   padding-left: 0.1rem;
+
   z-index: 2;
   clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
 }
