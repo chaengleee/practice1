@@ -420,13 +420,9 @@ body {
   width: 60%;
   transform: translate(10%, 70%);
   padding: 1rem;
+  list-style-type: disc;
 }
 
-.menuList > li::before {
-  content: "";
-  list-style-type: disc;
-  list-style-position: inside;
-}
 .pizzaMenu .menu img {
   width: 100%;
   /* object-fit: cover; */
