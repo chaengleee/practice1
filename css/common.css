@@ -472,7 +472,6 @@ body {
       grid-template-rows: 40px 40px 40px;
     }
     .menuList > li {
-      border: 1px solid red;
       font-size: 1.5rem;
       padding: 1rem;
     }
