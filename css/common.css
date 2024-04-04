@@ -138,10 +138,10 @@ body {
 
 .mainVisual .inner h2 {
   /* border: 3px solid red; */
-  width: 880px;
+  width: 55rem;
   font-size: 7vw;
   font-weight: bold;
-  line-height: 74px;
+  line-height: 4.6rem;
   color: white;
   top: 26%;
   left: 50%;
@@ -167,9 +167,9 @@ body {
   background-color: transparent;
   padding-top: 1rem;
   color: white;
-  width: 15rem;
-  height: 67px;
-  font-size: 2.5vw;
+  width: 13rem;
+  height: 4rem;
+  font-size: 2.5rem;
   z-index: 2;
   transform: translate(-50%, -50%);
   left: 50%;
@@ -213,13 +213,12 @@ body {
   font-weight: lighter;
   color: #67666a;
   left: 50%;
-  /* top: 100%; */
   transform: translate(-50%, 250%);
 }
 
 .mainVisual .vector {
   position: absolute;
-  margin-top: 50px;
+
   left: 50%;
   transform: translate(-50%, 350%);
   margin-top: 180px;
@@ -229,17 +228,33 @@ body {
   .mainVisual .inner h2,
   .mainVisual .inner p {
     bottom: 40%;
+    line-height: 3rem;
   }
   .mainVisual .inner a {
-    width: 11rem;
+    width: 10rem;
     font-size: 2rem;
     top: 40%;
+    padding: 1rem;
   }
   .mainVisual .inner2 p {
     font-size: 2rem;
   }
+  .mainVisual .vector {
+    margin-top: 250px;
+  }
 }
-
+@media (max-width: 500px) {
+  .mainVisual .inner h2,
+  .mainVisual .inner p {
+    line-height: 1.5rem;
+  }
+  .mainVisual .inner p {
+    bottom: 30%;
+  }
+  .mainVisual .inner a {
+    top: 35%;
+  }
+}
 .addMenu {
   width: 100%;
   margin-top: 10%;
@@ -344,6 +359,7 @@ body {
     right: 1rem;
   }
 }
+
 /* pizzamenu 수정 필요 */
 .pizzaMenu .desc {
   width: 80%;
@@ -383,6 +399,7 @@ body {
   position: absolute;
   font-size: 40px;
   top: 0.5rem;
+
   transform: translateX(180%);
 }
 
@@ -434,14 +451,14 @@ body {
 .menu > li:nth-of-type(2) {
   flex-direction: row-reverse;
 }
-@media (max-width: 1100px) {
+@media (max-width: 1200px) {
   .pizzaMenu .menu img {
     width: 50%;
   }
   .menu .menuList {
     height: 110%;
     width: 70%;
-    grid-template-rows: 30px 30px 30px;
+    grid-template-rows: 40px 40px 40px;
   }
   .pizzaMenu .desc button {
     width: 13%;
@@ -451,7 +468,31 @@ body {
   .menuList > li {
     font-size: 2rem;
   }
+
+  @media (max-width: 900px) {
+    .menu .menuList {
+      width: 70%;
+      height: 130%;
+      grid-template-rows: 40px 40px 40px;
+    }
+    .menuList > li {
+      border: 1px solid red;
+      font-size: 1.5rem;
+      padding: 1rem;
+    }
+    .pizzaMenu .desc button {
+      width: 15%;
+    }
+    .pizzaMenu .desc h3 strong,
+    .pizzaMenu .desc span {
+      font-size: 2.5rem;
+    }
+    .pizzaMenu .menu img {
+      margin-top: 2rem;
+    }
+  }
 }
+
 .vector2 {
   padding-top: 4vw;
 }
