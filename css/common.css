@@ -44,6 +44,8 @@ body {
 .hammenu {
   display: none;
   flex-direction: column;
+  position: absolute;
+  width: 50%;
   height: 0;
   overflow: hidden;
   padding: 3rem;
@@ -144,7 +146,7 @@ body {
   font-weight: bold;
   line-height: 4.6rem;
   color: white;
-  top: 26%;
+  top: 28%;
   left: 50%;
   z-index: 2;
   position: absolute;
@@ -349,7 +351,7 @@ body {
 }
 
 .addslide li:hover .fa-plus {
-  transform: rotate(120deg);
+  transform: rotate(40deg);
 }
 
 @media (max-width: 1250px) {
@@ -567,6 +569,7 @@ body {
 }
 .plusMenu .plus img {
   filter: brightness(55%);
+  width: 100%;
 }
 @media screen and (max-width: 1200px) {
   .plusMenu .card img {
