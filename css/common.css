@@ -1,15 +1,15 @@
 @charset "utf-8";
 
-.dongle-regular {
+/* .dongle-regular {
   font-family: "Dongle", sans-serif;
-  /* font-weight: 400;
-  font-style: normal; */
-}
-.freehand-regular {
+  font-weight: 400;
+  font-style: normal;
+} */
+/* .freehand-regular {
   font-family: "Freehand", cursive;
   font-weight: 400;
   font-style: normal;
-}
+} */
 
 .wrap {
   position: relative;
@@ -24,17 +24,37 @@ body {
   width: 100%;
   border: 1rem;
 }
-
+.hd .searchWrap input {
+  border: 1px solid #eaeaea;
+  background-color: #f2f1f1;
+  outline-color: #eaeaea;
+  font-size: 2rem;
+  font-family: "Dongle", sans-serif;
+  color: #928c8c;
+  width: 300px;
+  height: 60px;
+  border-radius: 20px;
+}
 .hd svg {
   width: 95px;
   height: 34px;
   margin-top: 1.5rem;
   margin-left: 1.5rem;
 }
+.hammenu {
+  display: none;
+  flex-direction: column;
+  height: 0;
+  overflow: hidden;
+  padding: 3rem;
+  background-color: white;
+}
+.hammenu a {
+  padding: 10px;
+}
 @media (min-width: 1200px) {
   .hd .gnb {
     width: 70%;
-    /* border: 2px solid purple; */
     margin-left: 5rem;
     top: 3rem;
     font-size: 2rem;
@@ -60,17 +80,6 @@ body {
     top: 30%;
   }
 
-  .hd .searchWrap input {
-    border: 1px solid #eaeaea;
-    background-color: #f2f1f1;
-    outline-color: #eaeaea;
-    font-size: 2rem;
-    font-family: "Dongle", sans-serif;
-    color: #928c8c;
-    width: 300px;
-    height: 60px;
-    border-radius: 20px;
-  }
   .ham {
     display: none;
   }
@@ -96,16 +105,8 @@ body {
     top: 40%;
     right: 2rem;
   }
-  .hd .searchWrap input {
-    border: 1px solid #eaeaea;
-    background-color: #f2f1f1;
-    outline-color: #eaeaea;
-    font-size: 2rem;
-    font-family: "Dongle", sans-serif;
-    color: #928c8c;
-    width: 300px;
-    height: 60px;
-    border-radius: 20px;
+  .hammenu {
+    display: block;
   }
 }
 
@@ -186,8 +187,8 @@ body {
 }
 .mainVisual .inner2 h2 {
   position: absolute;
-  width: 500px;
-  font-size: 88px;
+  width: 50rem;
+  font-size: 5.5rem;
   margin-top: 120px;
   left: 50%;
   transform: translate(-50%, 20%);
@@ -197,9 +198,9 @@ body {
 }
 .mainVisual .inner2 h3 {
   font-family: "Freehand", cursive;
-  width: 830px;
+  width: 50rem;
   position: absolute;
-  font-size: 100px;
+  font-size: 6.25rem;
   z-index: 0;
   color: #f0f0f0;
   left: 50%;
@@ -207,8 +208,8 @@ body {
 }
 .mainVisual .inner2 p {
   position: absolute;
-  width: 780px;
-  font-size: 48px;
+  width: 60rem;
+  font-size: 3rem;
   line-height: 30px;
   font-weight: lighter;
   color: #67666a;
@@ -234,13 +235,19 @@ body {
     width: 10rem;
     height: 3rem;
     font-size: 2rem;
-    top: 35%;
-    /* padding: 1rem; */
+    top: 38%;
     padding-bottom: 2rem;
   }
-  .mainVisual .inner2 p {
-    font-size: 2rem;
+  .mainVisual .inner2 h2 {
+    font-size: 5rem;
   }
+  .mainVisual .inner2 h3 {
+    font-size: 6rem;
+  }
+  .mainVisual .inner2 p {
+    font-size: 2.5rem;
+  }
+
   .mainVisual .vector {
     margin-top: 250px;
   }
@@ -260,6 +267,7 @@ body {
     height: 1rem;
   }
 }
+/* 슬라이드 섹션 */
 .addMenu {
   width: 100%;
   margin-top: 10%;
@@ -271,10 +279,10 @@ body {
   background-color: #c10000;
   left: -10%;
   top: 3rem;
-  width: 12vw;
-  height: 6.25vw;
+  width: 12rem;
+  height: 6rem;
   color: white;
-  font-size: 3.75vw;
+  font-size: 3.5rem;
   text-align: center;
   padding-top: 1.2rem;
   padding-left: 0.1rem;
@@ -296,14 +304,14 @@ body {
 }
 .addMenu .card {
   position: absolute;
-  width: 80%;
-  height: 8vw;
+  width: 300px;
+  height: 130px;
   display: flex;
   bottom: 0.5rem;
   left: 1rem;
   background-color: white;
   align-items: center;
-  border-radius: 30px;
+  border-radius: 20px;
   justify-content: space-evenly;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
@@ -319,15 +327,15 @@ body {
 }
 .addMenu .card .fa-plus {
   background-color: #c10000;
-  width: 2.56vw;
-  height: 2.56vw;
+  width: 2.56rem;
+  height: 2.56rem;
   border-radius: 50%;
   color: white;
   position: absolute;
   text-align: center;
   right: 32px;
   bottom: 45px;
-  font-size: 2vw;
+  font-size: 2rem;
   padding-top: 0.2rem;
   right: 1rem;
 }
@@ -344,38 +352,47 @@ body {
   transform: rotate(120deg);
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1250px) {
   .addMenu .card {
     width: 90%;
-    height: 70%;
+    height: 80%;
     justify-content: space-evenly;
   }
   .addMenu .card img {
-    width: 40%;
+    width: 35%;
   }
   .addMenu .menu p {
-    /* left: 10%; */
-    /* width: 100%; */
-    margin-top: 15%;
-  }
-  .addMenu .card .fa-plus {
-    text-align: center;
-    top: 2.5rem;
-    right: 1rem;
+    width: 160px;
+    height: 75px;
+    padding-bottom: 4rem;
   }
 }
 @media (max-width: 800px) {
   .addMenu .card > p {
+    font-size: 1.7rem;
+  }
+  .addMenu .card {
+    width: 90%;
+    height: 60%;
+
+    justify-content: space-evenly;
+  }
+  .addMenu .card .fa-plus {
+    width: 1.5rem;
+    height: 1.5rem;
     font-size: 1.5rem;
+    top: 2rem;
+    right: 0.2rem;
   }
   .addMenu .menu p {
     width: 7rem;
-    height: 30%;
-    font-size: 2rem;
+    height: 5rem;
+    font-size: 3rem;
+    margin-top: 15%;
   }
 }
 
-/* pizzamenu 수정 필요 */
+/* pizzamenu 수정 중 */
 .pizzaMenu .desc {
   width: 80%;
   height: 70%;
@@ -458,7 +475,7 @@ body {
 /* .menu > li:nth-of-type(odd) .desc {
   order: 1;
 } */
-.menu > li:nth-of-type(2) {
+.menu > li:nth-of-type(even) {
   flex-direction: row-reverse;
 }
 @media (max-width: 1200px) {
@@ -485,7 +502,7 @@ body {
     font-size: 2rem;
   }
 
-  @media (max-width: 900px) {
+  @media (max-width: 800px) {
     .pizzaMenu h2 {
       font-size: 3.5rem;
     }
@@ -499,13 +516,13 @@ body {
       padding: 1rem;
     }
     .pizzaMenu .desc button {
-      width: 20%;
-      height: 20%;
-      bottom: 50%;
-      font-size: 0.5rem;
+      width: 15%;
+      height: 18%;
+      top: 65%;
+      font-size: 0.8rem;
     }
     .pizzaMenu .desc h3 strong {
-      font-size: 2rem;
+      font-size: 2.5rem;
     }
     .pizzaMenu .desc span {
       font-size: 2rem;
@@ -556,7 +573,7 @@ body {
     width: 100%;
   }
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 700px) {
   .plusMenu .plus {
     display: flex;
     flex-direction: column;
@@ -669,7 +686,7 @@ body {
   .opinion form {
     display: grid;
     grid-template-columns: 1fr;
-    margin: auto;
+    /* margin: auto; */
     justify-content: center;
   }
 
@@ -690,7 +707,7 @@ body {
   }
   .opinion label textarea {
     transform: translateX(5%);
-    padding-left: 1rem;
+    /* padding-left: 3rem; */
   }
   .opinion button {
     bottom: 0.3rem;
